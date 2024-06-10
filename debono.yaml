@@ -85,11 +85,12 @@ flow:
   # The blue hat manages the thinking process, synthesizes insights, and outlines a plan of action.
   blue_hat:
     action: prompt
+    model:
+      max_output_tokens: 1000
     prompt:
       - role: system
         text: You are a helpful assistant, who is REALLY concise.
       - role: user
-
       - heading: Problem
         var: query
       - heading: White Hat
