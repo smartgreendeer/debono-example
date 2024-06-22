@@ -53,7 +53,8 @@ with gr.Blocks() as demo:
                 red_hat,
                 black_hat,
                 yellow_hat,
-                green_hat
+                green_hat,
+                my_hat
             ],
             [
                 flow.stream('white_hat.result'),
@@ -61,6 +62,7 @@ with gr.Blocks() as demo:
                 flow.stream('black_hat.result'),
                 flow.stream('yellow_hat.result'),
                 flow.stream('green_hat.result'),
+                flow.stream('my_hat.result'),
             ],
         ):
             yield {
@@ -83,6 +85,7 @@ with gr.Blocks() as demo:
             black_hat,
             yellow_hat,
             green_hat,
+            my_hat,
             blue_hat
         ],
     )

@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/asynchronous-flows/asyncflows/main/schemas/asyncflows_schema.json
 
 default_model:
-  model: claude-3-opus-20240229
+  model:  ollama/llama3
+  api_base: https://raphaelfrancis.com/ollama 
+  auth_token: smartgreendeer:a7c7d2d0277c459c5b4231a9775f71ca1690bdb190044683afb64b4c750fb1b120491601e8e33b22e39e7ab839c8607a0ab61e7e8ca79c7887ae54dc
   temperature: 1
   max_output_tokens: 300
 # De Bono's Six Thinking Hats is a powerful technique for creative problem-solving and decision-making.
@@ -92,11 +94,11 @@ flow:
       - heading: Problem
         var: query
       - text: |
-      How should i think?
-      Be conscious of what you say.
-      Come up with new ideas.
-      How can you overcome the challenges in aninnovative way?
-      Be VERY concise. Couple of sentences at most.
+          How should i think?
+          Be conscious of what you say.
+          Come up with new ideas.
+          How can you overcome the challenges in aninnovative way?
+          Be VERY concise. Couple of sentences at most.
 
   # The blue hat manages the thinking process, synthesizes insights, and outlines a plan of action.
   blue_hat:
@@ -123,7 +125,7 @@ flow:
         link: my_hat.result
       - text: |
           Review and synthesize the information and ideas generated from the other hats. 
-          Assess which ideas are most feasible and effective based on the facts (White Hat), emotions (Red Hat), risks (Black Hat), benefits (Yellow Hat), and creative solutions (Green Hat). 
+          Assess which ideas are most feasible and effective based on the facts (White Hat), emotions (Red Hat), risks (Black Hat), benefits (Yellow Hat), problems (My Hat), and creative solutions (Green Hat). 
           How can these insights be integrated into a coherent strategy? 
           Outline a plan with clear steps or actions, indicating responsibilities, deadlines, and milestones. 
           Consider how you will monitor progress and what criteria you will use to evaluate success.
