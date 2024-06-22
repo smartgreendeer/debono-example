@@ -14,7 +14,7 @@ from asyncflows.log_config import get_logger
 
 
 with gr.Blocks() as demo:
-    query = gr.Textbox(label="Problem", placeholder="Provide a problem to think about")
+    query = gr.Textbox(label="What is your problem?Please...", placeholder="Provide a problem to think about")
     submit_button = gr.Button("Submit")
 
     with gr.Row():
@@ -23,6 +23,7 @@ with gr.Blocks() as demo:
         black_hat = gr.Textbox(label="Black Hat", interactive=False)
         yellow_hat = gr.Textbox(label="Yellow Hat", interactive=False)
         green_hat = gr.Textbox(label="Green Hat", interactive=False)
+        my_hat = gr.Textbox(label="My Hat", interactive=False)
     blue_hat = gr.Textbox(label="Blue Hat (synthesis)", interactive=False)
 
     async def handle_submit(query):
@@ -33,6 +34,7 @@ with gr.Blocks() as demo:
             black_hat: "",
             yellow_hat: "",
             green_hat: "",
+            my_hat: "",
             blue_hat: "",
         }
 
